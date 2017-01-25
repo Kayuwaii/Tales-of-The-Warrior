@@ -34,6 +34,7 @@ namespace Engine
         public const int MONSTER_ID_GIANT_SPIDER = 3;
             //BOSSES
         public const int BOSS_ID_MASTER_CHIEF = 4;
+        public const int BOSS_ID_XIDAS = 5;
         //QUESTS
             //BASIC
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
@@ -90,6 +91,8 @@ namespace Engine
             Monster masterChief = new Monster(BOSS_ID_MASTER_CHIEF, "Master Chief", 150, 300, 100, 100, 100);
             masterChief.LootTable.Add(new LootItem(ItemByID(WEAPON_ID_DRAGONBANE), 5, true));
 
+            Monster xidas = new Monster(BOSS_ID_XIDAS, "Las Xidas", 26, 150, 100, 50, 50);
+
             Monsters.Add(bandit);
             Monsters.Add(snake);
             Monsters.Add(giantSpider);
@@ -125,8 +128,9 @@ namespace Engine
         private static void PopulateLocations()
         {
             // Create each location
-            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. You really need to clean up the place.");
+            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. Because every hero has a place to come back. Except Aerith... She can't.");
             home.MonsterLivingHere = MonsterByID(BOSS_ID_MASTER_CHIEF);
+            // home.MonsterLivingHere = null;
 
             Location townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.");
 
