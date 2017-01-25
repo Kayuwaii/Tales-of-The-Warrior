@@ -97,6 +97,7 @@ namespace Engine
             Monsters.Add(snake);
             Monsters.Add(giantSpider);
             Monsters.Add(masterChief);
+            Monsters.Add(xidas);
         }
         private static void PopulateQuests()
 
