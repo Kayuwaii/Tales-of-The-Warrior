@@ -483,6 +483,10 @@ namespace Tales_of_The_Warrior
             rtbMessages.ScrollToCaret();
         }
 
-
+        private void OpenBattleScreen(object sender, EventArgs e)
+        {
+            Battle newBattle = new Battle(_player);
+            newBattle.Show();
+        }
     }
 }
