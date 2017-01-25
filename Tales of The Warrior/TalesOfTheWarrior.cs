@@ -186,6 +186,7 @@ namespace Tales_of_The_Warrior
             // Refresh player's quest list
             UpdateQuestListInUI();
 
+
             // Refresh player's weapons combobox
             UpdateWeaponListInUI();
 
@@ -197,14 +198,15 @@ namespace Tales_of_The_Warrior
 
         private void UpdatePlayerStats()
         {
-            if (_player.ExperiencePoints >= _player.ExperiencePointsNeeded)
-            {
-                _player.lvlUp();
-            }
             if (_player.Level < 1)
             {
                 _player.Level++;
             }
+            if (_player.ExperiencePoints >= _player.ExperiencePointsNeeded)
+            {
+                _player.lvlUp();
+            }
+
             // Refresh player information and inventory controls
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
             lblGold.Text = _player.Gold.ToString();

@@ -1,0 +1,5 @@
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\bin\Release\Engine.dll
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\bin\Release\Engine.pdb
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.dll
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.pdb
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.csprojResolveAssemblyReference.cache

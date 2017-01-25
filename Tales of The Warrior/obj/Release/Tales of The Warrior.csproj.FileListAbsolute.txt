@@ -1,0 +1,11 @@
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.exe.config
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.exe
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.pdb
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Release\Engine.dll
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Release\Engine.pdb
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.csprojResolveAssemblyReference.cache
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.Properties.Resources.resources
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.TalesOfTheWarrior.resources
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.csproj.GenerateResource.Cache
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.exe
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.pdb
