@@ -43,7 +43,7 @@ namespace Engine
         public const int BOSS_QUEST_BEAT_MASTER_CHIEF = 3;
         //LOCATIONS
         public const int LOCATION_ID_HOME = 1;
-        public const int LOCATION_ID_TOWN_SQUARE = 2;
+        public const int LOCATION_ID_RAPTURE = 2;
         public const int LOCATION_ID_GUARD_POST = 3;
         public const int LOCATION_ID_ALCHEMIST_HUT = 4;
         public const int LOCATION_ID_ALCHEMISTS_GARDEN = 5;
@@ -129,11 +129,11 @@ namespace Engine
         private static void PopulateLocations()
         {
             // Create each location
-            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. Because every hero has a place to come back. Except Aerith... She can't.");
+            Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. Because every hero has a place to come back. Except Aerith... She just can't.");
             home.MonsterLivingHere = MonsterByID(BOSS_ID_MASTER_CHIEF);
             // home.MonsterLivingHere = null;
 
-            Location townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.");
+            Location rapture = new Location(LOCATION_ID_RAPTURE, "Rapture", "The biggest city");
 
             Location alchemistHut = new Location(LOCATION_ID_ALCHEMIST_HUT, "Alchemist's hut", "There are many strange plants on the shelves.");
             alchemistHut.QuestAvailableHere = QuestByID(QUEST_ID_CLEAR_ALCHEMIST_GARDEN);
@@ -155,25 +155,25 @@ namespace Engine
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
             // Link the locations together
-            home.LocationToNorth = townSquare;
+            home.LocationToNorth = rapture;
 
-            townSquare.LocationToNorth = alchemistHut;
-            townSquare.LocationToSouth = home;
-            townSquare.LocationToEast = guardPost;
-            townSquare.LocationToWest = farmhouse;
+            rapture.LocationToNorth = alchemistHut;
+            rapture.LocationToSouth = home;
+            rapture.LocationToEast = guardPost;
+            rapture.LocationToWest = farmhouse;
 
-            farmhouse.LocationToEast = townSquare;
+            farmhouse.LocationToEast = rapture;
             farmhouse.LocationToWest = farmersField;
 
             farmersField.LocationToEast = farmhouse;
 
-            alchemistHut.LocationToSouth = townSquare;
+            alchemistHut.LocationToSouth = rapture;
             alchemistHut.LocationToNorth = alchemistsGarden;
 
             alchemistsGarden.LocationToSouth = alchemistHut;
 
             guardPost.LocationToEast = bridge;
-            guardPost.LocationToWest = townSquare;
+            guardPost.LocationToWest = rapture;
 
             bridge.LocationToWest = guardPost;
             bridge.LocationToEast = spiderField;
@@ -182,7 +182,7 @@ namespace Engine
 
             // Add the locations to the static list
             Locations.Add(home);
-            Locations.Add(townSquare);
+            Locations.Add(rapture);
             Locations.Add(guardPost);
             Locations.Add(alchemistHut);
             Locations.Add(alchemistsGarden);
