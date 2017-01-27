@@ -193,7 +193,7 @@ namespace Tales_of_The_Warrior
             // Refresh player's potions combobox
             UpdatePotionListInUI();
 
-            ScrollToBottomOfMessages();
+            ScrollToBottomOfMessages(rtbMessages);
         }
 
         private void UpdatePlayerStats()
@@ -419,7 +419,7 @@ namespace Tales_of_The_Warrior
                 }
             }
 
-            ScrollToBottomOfMessages();
+            ScrollToBottomOfMessages(rtbMessages);
         }
 
         private void btnUsePotion_Click(object sender, EventArgs e)
@@ -474,19 +474,19 @@ namespace Tales_of_The_Warrior
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
 
-            ScrollToBottomOfMessages();
+            ScrollToBottomOfMessages(rtbMessages);
         }
 
-        private void ScrollToBottomOfMessages()
+        public static void ScrollToBottomOfMessages(RichTextBox box)
         {
-            rtbMessages.SelectionStart = rtbMessages.Text.Length;
-            rtbMessages.ScrollToCaret();
+            box.SelectionStart = box.Text.Length;
+            box.ScrollToCaret();
         }
 
         private void OpenBattleScreen(object sender, EventArgs e)
         {
-            Battle newBattle = new Battle(_player);
-            newBattle.Show();
+            Battle newBattle = new Battle(_player, _currentMonster);
+            newBattle.ShowDialog();
         }
     }
 }
