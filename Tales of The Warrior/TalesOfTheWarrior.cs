@@ -486,7 +486,16 @@ namespace Tales_of_The_Warrior
         private void OpenBattleScreen(object sender, EventArgs e)
         {
             Battle newBattle = new Battle(_player, _currentMonster);
+            newBattle.FormClosed += new FormClosedEventHandler(battleClosed);
             newBattle.ShowDialog();
+        }
+        void battleClosed(object sender, FormClosedEventArgs e)
+        {
+
+            UpdatePlayerStats();
+            UpdateInventoryListInUI();
+            UpdateQuestListInUI();
+            
         }
     }
 }

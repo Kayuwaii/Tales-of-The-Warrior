@@ -17,6 +17,7 @@ namespace Tales_of_The_Warrior
     {
         private Player BTLplayer;
         private Monster BTLmonster;
+        private bool isWon;
         public Battle()
         {
             InitializeComponent();
@@ -26,9 +27,17 @@ namespace Tales_of_The_Warrior
         {
             BTLplayer = getPlayerInfo;
             BTLmonster = current;
+
+
+            setEnemyDisplay();
             UpdatePlayerStats();
             UpdateWeaponListInUI();
             UpdatePotionListInUI();
+        }
+
+        private void setEnemyDisplay()
+        {
+            enemyHP.Text = BTLmonster.CurrentHitPoints + "/" + BTLmonster.MaximumHitPoints;
         }
         public void UpdatePlayerStats()
         {
@@ -123,10 +132,18 @@ namespace Tales_of_The_Warrior
             // Display message
             rtbMessages.Text += "You hit the " + BTLmonster.Name + " for " + damageToMonster.ToString() + " points." + Environment.NewLine;
 
+            //Update Enemy Display
+            setEnemyDisplay();
+
             // Check if the monster is dead
             if (BTLmonster.CurrentHitPoints <= 0)
             {
+                isWon = true;
                 // Monster is dead
+                if (isWon)
+                {
+                    MessageBox.Show("You defeated the " + BTLmonster.Name + Environment.NewLine + "You receive " + BTLmonster.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine  + "You receive " + BTLmonster.RewardGold.ToString() + " gold" + Environment.NewLine);
+                }
                 rtbMessages.Text += Environment.NewLine;
                 rtbMessages.Text += "You defeated the " + BTLmonster.Name + Environment.NewLine;
 
@@ -181,6 +198,7 @@ namespace Tales_of_The_Warrior
 
                 UpdateWeaponListInUI();
                 UpdatePotionListInUI();
+                this.Close();
 
             }
             else

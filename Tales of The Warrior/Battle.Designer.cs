@@ -42,12 +42,14 @@
             this.cboWeapons = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.enemyHP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(104, 88);
+            this.lblLevel.Location = new System.Drawing.Point(104, 110);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(35, 13);
             this.lblLevel.TabIndex = 15;
@@ -56,7 +58,7 @@
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
-            this.lblExperience.Location = new System.Drawing.Point(104, 62);
+            this.lblExperience.Location = new System.Drawing.Point(104, 84);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(35, 13);
             this.lblExperience.TabIndex = 14;
@@ -65,7 +67,7 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(104, 34);
+            this.lblGold.Location = new System.Drawing.Point(104, 56);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(35, 13);
             this.lblGold.TabIndex = 13;
@@ -74,7 +76,7 @@
             // lblHitPoints
             // 
             this.lblHitPoints.AutoSize = true;
-            this.lblHitPoints.Location = new System.Drawing.Point(104, 8);
+            this.lblHitPoints.Location = new System.Drawing.Point(104, 30);
             this.lblHitPoints.Name = "lblHitPoints";
             this.lblHitPoints.Size = new System.Drawing.Size(35, 13);
             this.lblHitPoints.TabIndex = 12;
@@ -83,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 89);
+            this.label4.Location = new System.Drawing.Point(12, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 11;
@@ -92,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
+            this.label3.Location = new System.Drawing.Point(12, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 10;
@@ -101,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 35);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 9;
@@ -110,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 8;
@@ -167,18 +169,38 @@
             // 
             // rtbMessages
             // 
-            this.rtbMessages.Location = new System.Drawing.Point(237, 12);
+            this.rtbMessages.Location = new System.Drawing.Point(145, 12);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
-            this.rtbMessages.Size = new System.Drawing.Size(371, 201);
+            this.rtbMessages.Size = new System.Drawing.Size(346, 201);
             this.rtbMessages.TabIndex = 22;
             this.rtbMessages.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(497, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Enemy HP: ";
+            // 
+            // enemyHP
+            // 
+            this.enemyHP.AutoSize = true;
+            this.enemyHP.Location = new System.Drawing.Point(566, 31);
+            this.enemyHP.Name = "enemyHP";
+            this.enemyHP.Size = new System.Drawing.Size(63, 13);
+            this.enemyHP.TabIndex = 24;
+            this.enemyHP.Text = "Enemy HP: ";
             // 
             // Battle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 350);
+            this.Controls.Add(this.enemyHP);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.rtbMessages);
             this.Controls.Add(this.btnUsePotion);
             this.Controls.Add(this.btnUseWeapon);
@@ -216,5 +238,7 @@
         private System.Windows.Forms.ComboBox cboWeapons;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox rtbMessages;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label enemyHP;
     }
 }
