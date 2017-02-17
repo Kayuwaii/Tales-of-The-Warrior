@@ -25,3 +25,11 @@ C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\D
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Debug\Tales of The Warrior.csproj.GenerateResource.Cache
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Debug\Tales of The Warrior.exe
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Debug\Tales of The Warrior.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\5.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\4.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\3.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\7.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\8.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\6.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\2.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\1.jpg

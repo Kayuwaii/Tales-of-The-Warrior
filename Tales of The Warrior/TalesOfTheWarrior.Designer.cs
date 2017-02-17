@@ -37,14 +37,11 @@
             this.lblExperience = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cboWeapons = new System.Windows.Forms.ComboBox();
-            this.cboPotions = new System.Windows.Forms.ComboBox();
             this.btnUseWeapon = new System.Windows.Forms.Button();
             this.btnWest = new System.Windows.Forms.Button();
             this.btnSouth = new System.Windows.Forms.Button();
             this.btnEast = new System.Windows.Forms.Button();
             this.btnNorth = new System.Windows.Forms.Button();
-            this.btnUsePotion = new System.Windows.Forms.Button();
             this.rtbLocation = new System.Windows.Forms.RichTextBox();
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
@@ -134,26 +131,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Select Action:";
             // 
-            // cboWeapons
-            // 
-            this.cboWeapons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cboWeapons.Location = new System.Drawing.Point(369, 559);
-            this.cboWeapons.Name = "cboWeapons";
-            this.cboWeapons.Size = new System.Drawing.Size(78, 21);
-            this.cboWeapons.TabIndex = 9;
-            // 
-            // cboPotions
-            // 
-            this.cboPotions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cboPotions.Location = new System.Drawing.Point(369, 593);
-            this.cboPotions.Name = "cboPotions";
-            this.cboPotions.Size = new System.Drawing.Size(78, 21);
-            this.cboPotions.TabIndex = 10;
-            // 
             // btnUseWeapon
             // 
             this.btnUseWeapon.Location = new System.Drawing.Point(620, 559);
@@ -203,16 +180,6 @@
             this.btnNorth.Text = "North";
             this.btnNorth.UseVisualStyleBackColor = true;
             this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
-            // 
-            // btnUsePotion
-            // 
-            this.btnUsePotion.Location = new System.Drawing.Point(620, 593);
-            this.btnUsePotion.Name = "btnUsePotion";
-            this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
-            this.btnUsePotion.TabIndex = 16;
-            this.btnUsePotion.Text = "Use";
-            this.btnUsePotion.UseVisualStyleBackColor = true;
-            this.btnUsePotion.Click += new System.EventHandler(this.btnUsePotion_Click);
             // 
             // rtbLocation
             // 
@@ -279,14 +246,11 @@
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
             this.Controls.Add(this.rtbLocation);
-            this.Controls.Add(this.btnUsePotion);
             this.Controls.Add(this.btnNorth);
             this.Controls.Add(this.btnEast);
             this.Controls.Add(this.btnSouth);
             this.Controls.Add(this.btnWest);
             this.Controls.Add(this.btnUseWeapon);
-            this.Controls.Add(this.cboPotions);
-            this.Controls.Add(this.cboWeapons);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblExperience);
@@ -296,6 +260,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "TalesOfTheWarrior";
             this.Text = "Tales of the Warrior";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
@@ -316,14 +282,11 @@
         private System.Windows.Forms.Label lblExperience;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cboWeapons;
-        private System.Windows.Forms.ComboBox cboPotions;
         private System.Windows.Forms.Button btnUseWeapon;
         private System.Windows.Forms.Button btnWest;
         private System.Windows.Forms.Button btnSouth;
         private System.Windows.Forms.Button btnEast;
         private System.Windows.Forms.Button btnNorth;
-        private System.Windows.Forms.Button btnUsePotion;
         private System.Windows.Forms.RichTextBox rtbLocation;
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.DataGridView dgvInventory;

@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Tales_of_The_Warrior;
 using Engine;
 
 namespace Tales_of_The_Warrior
@@ -17,7 +11,7 @@ namespace Tales_of_The_Warrior
     {
         private Player BTLplayer;
         private Monster BTLmonster;
-        private bool isWon;
+        public static bool isWon;
         public Battle()
         {
             InitializeComponent();
@@ -29,6 +23,7 @@ namespace Tales_of_The_Warrior
             BTLmonster = current;
 
 
+            setBG();
             setEnemyDisplay();
             UpdatePlayerStats();
             UpdateWeaponListInUI();
@@ -219,10 +214,19 @@ namespace Tales_of_The_Warrior
 
                 if (BTLplayer.CurrentHitPoints <= 0)
                 {
+                    isWon = false;
                     // Display message
                     rtbMessages.Text += "The " + BTLmonster.Name + " killed you." + Environment.NewLine;
+                    if (!isWon)
+                    {
+                        MessageBox.Show("The " + BTLmonster.Name + " killed you." + Environment.NewLine);
+                    }
 
+                    UpdatePlayerStats();
 
+                    UpdateWeaponListInUI();
+                    UpdatePotionListInUI();
+                    this.Close();
                 }
             }
 
@@ -286,6 +290,17 @@ namespace Tales_of_The_Warrior
         {
             box.SelectionStart = box.Text.Length;
             box.ScrollToCaret();
+        }
+        private void setBG()
+        {
+            Image myimage = new Bitmap(@".\battleBG\" + BTLplayer.CurrentLocation.ID + ".jpg");
+            this.BackgroundImage = myimage;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void Battle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
