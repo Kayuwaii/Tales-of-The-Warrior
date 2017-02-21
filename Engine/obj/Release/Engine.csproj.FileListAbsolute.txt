@@ -3,3 +3,8 @@ D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\bin\Releas
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.dll
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.pdb
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Engine\obj\Release\Engine.csprojResolveAssemblyReference.cache
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Engine\bin\Release\Engine.dll
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Engine\bin\Release\Engine.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Engine\obj\Release\Engine.csprojResolveAssemblyReference.cache
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Engine\obj\Release\Engine.dll
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Engine\obj\Release\Engine.pdb

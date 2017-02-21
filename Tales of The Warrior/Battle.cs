@@ -227,6 +227,7 @@ namespace Tales_of_The_Warrior
                     UpdateWeaponListInUI();
                     UpdatePotionListInUI();
                     this.Close();
+                    
                 }
             }
 

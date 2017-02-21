@@ -17,21 +17,24 @@ namespace Engine
             //WEAPONS
         public const int WEAPON_ID_SHITTY_KNIFE = 1;
         public const int WEAPON_ID_DRAGONBANE = 2;
+        public const int WEAPON_ID_KEYBLADE = 3;
             //POTIONS
-        public const int POTION_ID_HEALING_POTION = 3;
+        public const int POTION_ID_HEALING_POTION = 4;
+        public const int POTION_ID_GODDESS_TEARS = 5;
             //MISCELANEOUS
-        public const int ITEM_ID_BANDIT_RING = 4;
-        public const int ITEM_ID_PIECE_OF_FUR = 5;
-        public const int ITEM_ID_SNAKE_FANG = 6;
-        public const int ITEM_ID_SNAKESKIN = 7;
-        public const int ITEM_ID_BEAR_FANG = 8;
-        public const int ITEM_ID_SPIDER_SILK = 9;
-        public const int ITEM_ID_ADVENTURER_PASS = 10;
+        public const int ITEM_ID_BANDIT_RING = 6;
+        public const int ITEM_ID_PIECE_OF_FUR = 7;
+        public const int ITEM_ID_SNAKE_FANG = 8;
+        public const int ITEM_ID_SNAKESKIN = 9;
+        public const int ITEM_ID_BEAR_FANG = 10;
+        public const int ITEM_ID_SPIDER_SILK = 11;
+        public const int ITEM_ID_ADVENTURER_PASS = 12;
         //ENEMIES
             //MONSTERS
         public const int MONSTER_ID_BANDIT = 1;
         public const int MONSTER_ID_SNAKE = 2;
         public const int MONSTER_ID_GIANT_SPIDER = 3;
+        public const int MONSTER_ID_WEABOO = 6;
             //BOSSES
         public const int BOSS_ID_MASTER_CHIEF = 4;
         public const int BOSS_ID_XIDAS = 5;
@@ -72,6 +75,8 @@ namespace Engine
             Items.Add(new Item(ITEM_ID_BEAR_FANG, "Bear fang", "Bear fangs"));
             Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks"));
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
+            Items.Add(new Weapon(WEAPON_ID_KEYBLADE, "Keyblade", "Keyblades", 6, 13));
+            Items.Add(new HealingPotion(POTION_ID_GODDESS_TEARS, "Goddess Tears", "Goddess Tears", 50));
         }
 
         private static void PopulateMonsters()
@@ -92,6 +97,7 @@ namespace Engine
             masterChief.LootTable.Add(new LootItem(ItemByID(WEAPON_ID_DRAGONBANE), 5, true));
 
             Monster xidas = new Monster(BOSS_ID_XIDAS, "Las Xidas", 26, 150, 100, 50, 50);
+            xidas.LootTable.Add(new LootItem(ItemByID(WEAPON_ID_KEYBLADE), 100, true));
 
             Monsters.Add(bandit);
             Monsters.Add(snake);
@@ -150,6 +156,7 @@ namespace Engine
             Location guardPost = new Location(LOCATION_ID_GUARD_POST, "Guard post", "There is a large, tough-looking guard here.", ItemByID(ITEM_ID_ADVENTURER_PASS));
 
             Location bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.");
+            bridge.MonsterLivingHere = MonsterByID(BOSS_ID_XIDAS);
 
             Location spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest", "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);

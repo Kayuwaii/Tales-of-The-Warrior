@@ -317,7 +317,7 @@ namespace Tales_of_The_Warrior
             UpdatePlayerStats();
             UpdateInventoryListInUI();
             UpdateQuestListInUI();
-            
+            GC.Collect();
         }
     }
 }

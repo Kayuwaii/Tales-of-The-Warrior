@@ -9,3 +9,23 @@ D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warr
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.csproj.GenerateResource.Cache
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.exe
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.exe.config
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.exe
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\5.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\4.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\3.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\7.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\8.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\6.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\2.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleBG\1.jpg
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.exe
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\Tales of The Warrior.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\Engine.dll
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\Engine.pdb
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.csprojResolveAssemblyReference.cache
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.Battle.resources
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.Properties.Resources.resources
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.TalesOfTheWarrior.resources
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales of The Warrior.csproj.GenerateResource.Cache
