@@ -16,7 +16,8 @@ namespace Tales_of_The_Warrior
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TalesOfTheWarrior());
+            //Application.Run(new TalesOfTheWarrior());
+            Application.Run(new LAUNCHER());
         }
     }
 }

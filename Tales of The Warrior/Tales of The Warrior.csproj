@@ -52,6 +52,12 @@
     <Compile Include="Battle.Designer.cs">
       <DependentUpon>Battle.cs</DependentUpon>
     </Compile>
+    <Compile Include="LAUNCHER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAUNCHER.Designer.cs">
+      <DependentUpon>LAUNCHER.cs</DependentUpon>
+    </Compile>
     <Compile Include="TalesOfTheWarrior.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Battle.resx">
       <DependentUpon>Battle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAUNCHER.resx">
+      <DependentUpon>LAUNCHER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +129,13 @@
     <Content Include="battleBG\1.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LAUNCHER\btnBG.png" />
+    <Content Include="LAUNCHER\launcherBG.gif" />
+    <Content Include="LAUNCHER\title.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

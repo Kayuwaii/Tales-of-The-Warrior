@@ -33,3 +33,12 @@ C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\D
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\6.jpg
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\2.jpg
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\battleBG\1.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\5.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\4.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\3.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\7.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\8.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\6.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\2.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleBG\1.jpg
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\obj\Debug\Tales_of_The_Warrior.LAUNCHER.resources

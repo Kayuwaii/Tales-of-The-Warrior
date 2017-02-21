@@ -28,6 +28,7 @@ namespace Tales_of_The_Warrior
             UpdatePlayerStats();
             UpdateWeaponListInUI();
             UpdatePotionListInUI();
+            GC.Collect();
         }
 
         private void setEnemyDisplay()
@@ -229,6 +230,7 @@ namespace Tales_of_The_Warrior
                     this.Close();
                     
                 }
+                GC.Collect();
             }
 
             ScrollToBottomOfMessages(rtbMessages);
@@ -285,6 +287,7 @@ namespace Tales_of_The_Warrior
             UpdatePotionListInUI();
 
             ScrollToBottomOfMessages(rtbMessages);
+            GC.Collect();
         }
 
         public static void ScrollToBottomOfMessages(RichTextBox box)
@@ -299,10 +302,6 @@ namespace Tales_of_The_Warrior
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        private void Battle_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

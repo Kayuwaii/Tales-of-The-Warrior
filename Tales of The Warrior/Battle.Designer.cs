@@ -218,7 +218,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Battle";
             this.Text = "Battle";
-            this.Load += new System.EventHandler(this.Battle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
