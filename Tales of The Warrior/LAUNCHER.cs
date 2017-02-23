@@ -16,6 +16,7 @@ namespace Tales_of_The_Warrior
             btn_exit.BackColor = Color.Transparent;
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
+
         }
 
         private void SelMouseEnter(object sender, System.EventArgs e)

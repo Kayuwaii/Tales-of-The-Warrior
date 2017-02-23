@@ -45,3 +45,4 @@ D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warr
 D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\title.png
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\title.png
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Debug\Tales_of_The_Warrior.LAUNCHER.resources
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\loli.gif

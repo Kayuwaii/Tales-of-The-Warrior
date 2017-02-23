@@ -131,6 +131,9 @@
     </Content>
     <Content Include="LAUNCHER\btnBG.png" />
     <Content Include="LAUNCHER\launcherBG.gif" />
+    <Content Include="LAUNCHER\loli.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LAUNCHER\title.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
