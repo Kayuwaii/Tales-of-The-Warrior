@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tales_of_The_Warrior
@@ -17,7 +14,15 @@ namespace Tales_of_The_Warrior
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TalesOfTheWarrior());
-            Application.Run(new LAUNCHER());
+            var launch = new LAUNCHER();
+            launch.Show();
+            Application.Run();
+
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
         }
+
+
     }
 }

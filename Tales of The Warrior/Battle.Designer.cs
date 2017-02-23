@@ -44,6 +44,8 @@
             this.rtbMessages = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.enemyHP = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblSap = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLevel
@@ -194,11 +196,31 @@
             this.enemyHP.TabIndex = 24;
             this.enemyHP.Text = "Enemy HP: ";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 137);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "SAP:";
+            // 
+            // lblSap
+            // 
+            this.lblSap.AutoSize = true;
+            this.lblSap.Location = new System.Drawing.Point(104, 137);
+            this.lblSap.Name = "lblSap";
+            this.lblSap.Size = new System.Drawing.Size(35, 13);
+            this.lblSap.TabIndex = 26;
+            this.lblSap.Text = "label8";
+            // 
             // Battle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 350);
+            this.Controls.Add(this.lblSap);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.enemyHP);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rtbMessages);
@@ -241,5 +263,7 @@
         private System.Windows.Forms.RichTextBox rtbMessages;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label enemyHP;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSap;
     }
 }

@@ -64,6 +64,7 @@
             this.btn_play.Text = "PLAY ";
             this.btn_play.UseMnemonic = false;
             this.btn_play.UseVisualStyleBackColor = false;
+            this.btn_play.Click += new System.EventHandler(this.play_click);
             this.btn_play.MouseEnter += new System.EventHandler(this.SelMouseEnter);
             this.btn_play.MouseLeave += new System.EventHandler(this.SelMouseLeave);
             // 
@@ -93,6 +94,7 @@
             this.btn_exit.Text = "EXIT ";
             this.btn_exit.UseMnemonic = false;
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_MouseClick);
             this.btn_exit.MouseEnter += new System.EventHandler(this.SelMouseEnter);
             this.btn_exit.MouseLeave += new System.EventHandler(this.SelMouseLeave);
             // 

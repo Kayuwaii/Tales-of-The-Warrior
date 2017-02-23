@@ -51,6 +51,7 @@ namespace Tales_of_The_Warrior
             lblGold.Text = BTLplayer.Gold.ToString();
             lblExperience.Text = BTLplayer.ExperiencePoints.ToString();
             lblLevel.Text = BTLplayer.Level.ToString();
+            lblSap.Text = BTLplayer.SAPoints.ToString();
 
         }
         private void UpdateWeaponListInUI()

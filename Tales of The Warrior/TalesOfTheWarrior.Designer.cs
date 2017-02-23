@@ -264,6 +264,7 @@
             this.MaximizeBox = false;
             this.Name = "TalesOfTheWarrior";
             this.Text = "Tales of the Warrior";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fullClose);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);

@@ -20,12 +20,14 @@ namespace Tales_of_The_Warrior
         public TalesOfTheWarrior()
         {
             InitializeComponent();
+            GC.Collect();
 
             _player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.WEAPON_ID_SHITTY_KNIFE), 1));
 
             UpdatePlayerStats();
+            GC.Collect();
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -208,7 +210,8 @@ namespace Tales_of_The_Warrior
             lblGold.Text = _player.Gold.ToString();
             lblExperience.Text = _player.ExperiencePoints.ToString();
             lblLevel.Text = _player.Level.ToString();
-
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         private void UpdateInventoryListInUI()
@@ -317,7 +320,18 @@ namespace Tales_of_The_Warrior
             UpdatePlayerStats();
             UpdateInventoryListInUI();
             UpdateQuestListInUI();
+            Battle c = sender as Battle;
+            c.Dispose();
+            GC.WaitForPendingFinalizers();
             GC.Collect();
+            
+        }
+
+        public void fullClose(object sender, FormClosedEventArgs e)
+        {
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+            Application.Exit();
         }
     }
 }

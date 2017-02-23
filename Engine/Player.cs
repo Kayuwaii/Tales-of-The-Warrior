@@ -8,12 +8,16 @@ namespace Engine
 {
     public class Player : LivingCreature
     {
+        
+
         public int Gold { get; set; }
         public int ExperiencePoints { get; set; }
         public int Level { get; set; }
         public int ExperiencePointsNeeded
         {
             get { return ((100 + (Level * 20) + 1)); }
+        }
+        public int SAPoints { get; set;
         }
         public Location CurrentLocation { get; set; }
         public List<InventoryItem> Inventory { get; set; }
@@ -23,6 +27,7 @@ namespace Engine
         {
             Gold = gold;
             ExperiencePoints = experiencePoints;
+            SAPoints = Level / 5;
 
             Inventory = new List<InventoryItem>();
             Quests = new List<PlayerQuest>();
@@ -158,7 +163,7 @@ namespace Engine
 
         public void lvlUp()
         {
-
+            if (Level % 5 == 1) { SAPoints++; }
             int overXP = ExperiencePoints - ExperiencePointsNeeded;
             Level++;
             MaximumHitPoints += 5;

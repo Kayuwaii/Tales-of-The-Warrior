@@ -29,6 +29,8 @@ namespace Engine
         public const int ITEM_ID_BEAR_FANG = 10;
         public const int ITEM_ID_SPIDER_SILK = 11;
         public const int ITEM_ID_ADVENTURER_PASS = 12;
+            //SCROLLS
+        public const int SCROLL_ID_BLAZE = 13;
         //ENEMIES
             //MONSTERS
         public const int MONSTER_ID_BANDIT = 1;
@@ -77,6 +79,7 @@ namespace Engine
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
             Items.Add(new Weapon(WEAPON_ID_KEYBLADE, "Keyblade", "Keyblades", 6, 13));
             Items.Add(new HealingPotion(POTION_ID_GODDESS_TEARS, "Goddess Tears", "Goddess Tears", 50));
+            Items.Add(new Scroll(SCROLL_ID_BLAZE, "BLAZE", "BLAZE", 15, 50, 1));
         }
 
         private static void PopulateMonsters()
@@ -84,6 +87,7 @@ namespace Engine
             Monster bandit = new Monster(MONSTER_ID_BANDIT, "Bandit", 10, 4, 10, 6, 6);
             bandit.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BANDIT_RING), 75, false));
             bandit.LootTable.Add(new LootItem(ItemByID(ITEM_ID_PIECE_OF_FUR), 75, true));
+            bandit.LootTable.Add(new LootItem(ItemByID(SCROLL_ID_BLAZE), 50, true));
 
             Monster snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3);
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
