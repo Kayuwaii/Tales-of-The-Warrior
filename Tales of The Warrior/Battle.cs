@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 using Engine;
+using System.Media;
 
 namespace Tales_of_The_Warrior
 {
@@ -12,6 +13,7 @@ namespace Tales_of_The_Warrior
         private Player BTLplayer;
         private Monster BTLmonster;
         public static bool isWon;
+        private SoundPlayer BGMusicPlayer = new SoundPlayer();
         public Battle()
         {
             InitializeComponent();
@@ -301,8 +303,16 @@ namespace Tales_of_The_Warrior
             Image myimage = new Bitmap(@".\battleBG\" + BTLplayer.CurrentLocation.ID + ".jpg");
             this.BackgroundImage = myimage;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+
+            BGMusicPlayer.SoundLocation= @".\battleMusic\" + BTLplayer.CurrentLocation.ID + ".wav";
+            BGMusicPlayer.PlayLooping();
         }
 
+        private void Battle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            BGMusicPlayer.Stop();
+            BGMusicPlayer.Dispose();
+        }
     }
 
 }

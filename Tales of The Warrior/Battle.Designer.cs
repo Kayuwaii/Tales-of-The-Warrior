@@ -240,6 +240,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Battle";
             this.Text = "Battle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Battle_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -321,9 +321,10 @@ namespace Tales_of_The_Warrior
             UpdateInventoryListInUI();
             UpdateQuestListInUI();
             Battle c = sender as Battle;
-            c.Dispose();
+        
             GC.WaitForPendingFinalizers();
             GC.Collect();
+            
             
         }
 

@@ -46,3 +46,12 @@ D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warr
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\title.png
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Debug\Tales_of_The_Warrior.LAUNCHER.resources
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\loli.gif
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\3.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\2.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\1.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\LAUNCHER\loli.gif
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\6.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\5.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\4.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\8.wav
+D:\Documentos\Visual Studio 2015\Projects\Tales of The Warrior\Tales of The Warrior\bin\Debug\battleMusic\7.wav
