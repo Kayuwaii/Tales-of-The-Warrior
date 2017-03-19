@@ -28,8 +28,7 @@ namespace Tales_of_The_Warrior
             setBG();
             setEnemyDisplay();
             UpdatePlayerStats();
-            UpdateWeaponListInUI();
-            UpdatePotionListInUI();
+
             GC.Collect();
         }
 
@@ -53,16 +52,20 @@ namespace Tales_of_The_Warrior
             lblGold.Text = BTLplayer.Gold.ToString();
             lblExperience.Text = BTLplayer.ExperiencePoints.ToString();
             lblLevel.Text = BTLplayer.Level.ToString();
-            lblSap.Text = BTLplayer.SAPoints.ToString();
+            lblSap.Text = BTLplayer.currentSAPoints.ToString() + " / " + BTLplayer.maximumSAPoints.ToString();
 
+            UpdateScrollListInUI();
+            UpdateWeaponListInUI();
+            UpdatePotionListInUI();
         }
+        //Update weapon list in CBO
         private void UpdateWeaponListInUI()
         {
             List<Weapon> weapons = new List<Weapon>();
 
             foreach (InventoryItem inventoryItem in BTLplayer.Inventory)
             {
-                if (inventoryItem.Details is Weapon)
+                if (inventoryItem.Details is Weapon )
                 {
                     if (inventoryItem.Quantity > 0)
                     {
@@ -84,6 +87,37 @@ namespace Tales_of_The_Warrior
                 cboWeapons.ValueMember = "ID";
 
                 cboWeapons.SelectedIndex = 0;
+            }
+        }
+
+        private void UpdateScrollListInUI()
+        {
+            List<Scroll> scrolls = new List<Scroll>();
+
+            foreach (InventoryItem inventoryItem in BTLplayer.Inventory)
+            {
+                if (inventoryItem.Details is Scroll)
+                {
+                    if (inventoryItem.Quantity > 0)
+                    {
+                        scrolls.Add((Scroll)inventoryItem.Details);
+                    }
+                }
+            }
+
+            if (scrolls.Count == 0)
+            {
+                // The player doesn't have any scrolls, so hide the weapon combobox and "Use" button
+                cboScrolls.Visible = false;
+                btnUseScroll.Visible = false;
+            }
+            else
+            {
+                cboScrolls.DataSource = scrolls;
+                cboScrolls.DisplayMember = "Name";
+                cboScrolls.ValueMember = "ID";
+
+                cboScrolls.SelectedIndex = 0;
             }
         }
 
@@ -195,8 +229,6 @@ namespace Tales_of_The_Warrior
 
                 UpdatePlayerStats();
 
-                UpdateWeaponListInUI();
-                UpdatePotionListInUI();
                 this.Close();
 
             }
@@ -228,8 +260,6 @@ namespace Tales_of_The_Warrior
 
                     UpdatePlayerStats();
 
-                    UpdateWeaponListInUI();
-                    UpdatePotionListInUI();
                     this.Close();
                     
                 }

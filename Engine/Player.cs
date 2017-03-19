@@ -17,8 +17,8 @@ namespace Engine
         {
             get { return ((100 + (Level * 20) + 1)); }
         }
-        public int SAPoints { get; set;
-        }
+        public int maximumSAPoints { get; set;}
+        public int currentSAPoints { get; set;}
         public Location CurrentLocation { get; set; }
         public List<InventoryItem> Inventory { get; set; }
         public List<PlayerQuest> Quests { get; set; }
@@ -27,7 +27,8 @@ namespace Engine
         {
             Gold = gold;
             ExperiencePoints = experiencePoints;
-            SAPoints = Level / 5;
+            maximumSAPoints = Level / 5;
+            currentSAPoints = maximumSAPoints;
 
             Inventory = new List<InventoryItem>();
             Quests = new List<PlayerQuest>();
@@ -163,13 +164,21 @@ namespace Engine
 
         public void lvlUp()
         {
-            if (Level % 5 == 1) { SAPoints++; }
             int overXP = ExperiencePoints - ExperiencePointsNeeded;
-            Level++;
-            MaximumHitPoints += 5;
-            ExperiencePoints = 0 + overXP;
-
+            while (overXP > ExperiencePointsNeeded)
+            {
+                lvlUpSystem(overXP);
+                overXP = ExperiencePoints - ExperiencePointsNeeded;
+            }
         }
 
+        private void lvlUpSystem(int extraXP)
+        {
+            if (Level % 5 == 1) { maximumSAPoints++; }
+            
+            Level++;
+            MaximumHitPoints += 5;
+            ExperiencePoints = 0 + extraXP;
+        }
     }
 }

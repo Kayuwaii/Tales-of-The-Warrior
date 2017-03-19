@@ -46,6 +46,8 @@
             this.enemyHP = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblSap = new System.Windows.Forms.Label();
+            this.btnUseScroll = new System.Windows.Forms.Button();
+            this.cboScrolls = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblLevel
@@ -122,7 +124,7 @@
             // 
             // btnUsePotion
             // 
-            this.btnUsePotion.Location = new System.Drawing.Point(538, 317);
+            this.btnUsePotion.Location = new System.Drawing.Point(546, 286);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
             this.btnUsePotion.TabIndex = 21;
@@ -132,7 +134,7 @@
             // 
             // btnUseWeapon
             // 
-            this.btnUseWeapon.Location = new System.Drawing.Point(538, 283);
+            this.btnUseWeapon.Location = new System.Drawing.Point(546, 252);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
             this.btnUseWeapon.TabIndex = 20;
@@ -145,7 +147,7 @@
             this.cboPotions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPotions.FormattingEnabled = true;
             this.cboPotions.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cboPotions.Location = new System.Drawing.Point(287, 317);
+            this.cboPotions.Location = new System.Drawing.Point(295, 286);
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(78, 21);
             this.cboPotions.TabIndex = 19;
@@ -155,7 +157,7 @@
             this.cboWeapons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWeapons.FormattingEnabled = true;
             this.cboWeapons.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cboWeapons.Location = new System.Drawing.Point(287, 283);
+            this.cboWeapons.Location = new System.Drawing.Point(295, 252);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(78, 21);
             this.cboWeapons.TabIndex = 18;
@@ -163,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(535, 255);
+            this.label5.Location = new System.Drawing.Point(543, 224);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 17;
@@ -214,11 +216,32 @@
             this.lblSap.TabIndex = 26;
             this.lblSap.Text = "label8";
             // 
+            // btnUseScroll
+            // 
+            this.btnUseScroll.Location = new System.Drawing.Point(546, 317);
+            this.btnUseScroll.Name = "btnUseScroll";
+            this.btnUseScroll.Size = new System.Drawing.Size(75, 23);
+            this.btnUseScroll.TabIndex = 28;
+            this.btnUseScroll.Text = "Use";
+            this.btnUseScroll.UseVisualStyleBackColor = true;
+            // 
+            // cboScrolls
+            // 
+            this.cboScrolls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboScrolls.FormattingEnabled = true;
+            this.cboScrolls.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cboScrolls.Location = new System.Drawing.Point(295, 317);
+            this.cboScrolls.Name = "cboScrolls";
+            this.cboScrolls.Size = new System.Drawing.Size(78, 21);
+            this.cboScrolls.TabIndex = 27;
+            // 
             // Battle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 350);
+            this.Controls.Add(this.btnUseScroll);
+            this.Controls.Add(this.cboScrolls);
             this.Controls.Add(this.lblSap);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.enemyHP);
@@ -266,5 +289,7 @@
         private System.Windows.Forms.Label enemyHP;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblSap;
+        private System.Windows.Forms.Button btnUseScroll;
+        private System.Windows.Forms.ComboBox cboScrolls;
     }
 }

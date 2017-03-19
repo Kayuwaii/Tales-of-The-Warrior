@@ -25,7 +25,7 @@ namespace Tales_of_The_Warrior
             _player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.WEAPON_ID_SHITTY_KNIFE), 1));
-
+            _player.Inventory.Add(new InventoryItem(World.ItemByID(World.SCROLL_ID_BLAZE), 1)); //Temp
             UpdatePlayerStats();
             GC.Collect();
         }
@@ -74,6 +74,7 @@ namespace Tales_of_The_Warrior
 
             // Completely heal the player
             _player.CurrentHitPoints = _player.MaximumHitPoints;
+            _player.currentSAPoints = _player.maximumSAPoints;
 
             // Update Hit Points in UI
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
@@ -184,6 +185,8 @@ namespace Tales_of_The_Warrior
             // Refresh player's quest list
             UpdateQuestListInUI();
 
+            //Refresh Scroll list
+            UpdateScrollListInUI();
 
             // Refresh player's weapons combobox
             UpdateWeaponListInUI();
@@ -262,6 +265,31 @@ namespace Tales_of_The_Warrior
                     if (inventoryItem.Quantity > 0)
                     {
                         weapons.Add((Weapon)inventoryItem.Details);
+                    }
+                }
+            }
+
+            if (weapons.Count == 0)
+            {
+                // The player doesn't have any weapons, so hide the weapon combobox and "Use" button
+                btnUseWeapon.Visible = false;
+            }
+            else
+            {
+            }
+        }
+
+        private void UpdateScrollListInUI()
+        {
+            List<Scroll> weapons = new List<Scroll>();
+
+            foreach (InventoryItem inventoryItem in _player.Inventory)
+            {
+                if (inventoryItem.Details is Scroll)
+                {
+                    if (inventoryItem.Quantity > 0)
+                    {
+                        weapons.Add((Scroll)inventoryItem.Details);
                     }
                 }
             }

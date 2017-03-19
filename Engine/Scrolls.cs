@@ -18,5 +18,10 @@ namespace Engine
             MaximumDamage = maximumDamage;
             SAPRequired = sapRequired;
         }
+
+        private bool isUsable()
+        {
+            return true;
+        }
     }
 }
