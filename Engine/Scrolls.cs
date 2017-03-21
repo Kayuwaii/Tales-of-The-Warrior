@@ -19,9 +19,15 @@ namespace Engine
             SAPRequired = sapRequired;
         }
 
-        private bool isUsable()
+
+    }
+    public static class xtndMeth
+    {
+        public static bool isUsable(this Scroll current, Player user)
         {
-            return true;
+            return current.SAPRequired < user.currentSAPoints;
         }
+
+
     }
 }

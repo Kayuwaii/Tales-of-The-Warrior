@@ -269,6 +269,134 @@ namespace Tales_of_The_Warrior
             ScrollToBottomOfMessages(rtbMessages);
         }
 
+        private void btnUseScroll_Click(object sender, EventArgs e)
+        {
+            // Get the currently selected weapon from the cboWeapons ComboBox
+            Scroll currentScroll = cboScrolls.SelectedItem as Scroll;
+            if (currentScroll.isUsable(BTLplayer))
+            {
+                BTLplayer.Inventory.Remove(sender as InventoryItem);
+                BTLplayer.currentSAPoints = BTLplayer.currentSAPoints - currentScroll.SAPRequired;
+
+                UpdatePlayerStats();
+                // Determine the amount of damage to do to the monster
+                int damageToMonster = RandomNumberGenerator.NumberBetween(currentScroll.MinimumDamage, currentScroll.MaximumDamage);
+
+                // Apply the damage to the monster's CurrentHitPoints
+                BTLmonster.CurrentHitPoints -= damageToMonster;
+
+                // Display message
+                rtbMessages.Text += "You hit the " + BTLmonster.Name + " with the " + currentScroll.Name + " spell. Dealing " + damageToMonster.ToString() + " damage." + Environment.NewLine;
+
+                //Update Enemy Display
+                setEnemyDisplay();
+
+                // Check if the monster is dead
+                if (BTLmonster.CurrentHitPoints <= 0)
+                {
+                    isWon = true;
+                    // Monster is dead
+                    if (isWon)
+                    {
+                        MessageBox.Show("You defeated the " + BTLmonster.Name + Environment.NewLine + "You receive " + BTLmonster.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine + "You receive " + BTLmonster.RewardGold.ToString() + " gold" + Environment.NewLine);
+                    }
+                    rtbMessages.Text += Environment.NewLine;
+                    rtbMessages.Text += "You defeated the " + BTLmonster.Name + Environment.NewLine;
+
+                    // Give player experience points for killing the monster
+                    BTLplayer.ExperiencePoints += BTLmonster.RewardExperiencePoints;
+                    rtbMessages.Text += "You receive " + BTLmonster.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine;
+
+                    // Give player gold for killing the monster 
+                    BTLplayer.Gold += BTLmonster.RewardGold;
+                    rtbMessages.Text += "You receive " + BTLmonster.RewardGold.ToString() + " gold" + Environment.NewLine;
+
+                    // Get random loot items from the monster
+                    List<InventoryItem> lootedItems = new List<InventoryItem>();
+
+                    // Add items to the lootedItems list, comparing a random number to the drop percentage
+                    foreach (LootItem lootItem in BTLmonster.LootTable)
+                    {
+                        if (RandomNumberGenerator.NumberBetween(1, 100) <= lootItem.DropPercentage)
+                        {
+                            lootedItems.Add(new InventoryItem(lootItem.Details, 1));
+                        }
+                    }
+
+                    // If no items were randomly selected, then add the default loot item(s).
+                    if (lootedItems.Count == 0)
+                    {
+                        foreach (LootItem lootItem in BTLmonster.LootTable)
+                        {
+                            if (lootItem.IsDefaultItem)
+                            {
+                                lootedItems.Add(new InventoryItem(lootItem.Details, 1));
+                            }
+                        }
+                    }
+
+                    // Add the looted items to the player's inventory
+                    foreach (InventoryItem inventoryItem in lootedItems)
+                    {
+                        BTLplayer.AddItemToInventory(inventoryItem.Details);
+
+                        if (inventoryItem.Quantity == 1)
+                        {
+                            rtbMessages.Text += "You loot " + inventoryItem.Quantity.ToString() + " " + inventoryItem.Details.Name + Environment.NewLine;
+                        }
+                        else
+                        {
+                            rtbMessages.Text += "You loot " + inventoryItem.Quantity.ToString() + " " + inventoryItem.Details.NamePlural + Environment.NewLine;
+                        }
+                    }
+
+                    UpdatePlayerStats();
+
+                    this.Close();
+
+                }
+                else
+                {
+                    // Monster is still alive
+
+                    // Determine the amount of damage the monster does to the player
+                    int damageToPlayer = RandomNumberGenerator.NumberBetween(0, BTLmonster.MaximumDamage);
+
+                    // Display message
+                    rtbMessages.Text += "The " + BTLmonster.Name + " did " + damageToPlayer.ToString() + " points of damage." + Environment.NewLine;
+
+                    // Subtract damage from player
+                    BTLplayer.CurrentHitPoints -= damageToPlayer;
+
+                    // Refresh player data in UI
+                    lblHitPoints.Text = BTLplayer.CurrentHitPoints.ToString();
+
+                    if (BTLplayer.CurrentHitPoints <= 0)
+                    {
+                        isWon = false;
+                        // Display message
+                        rtbMessages.Text += "The " + BTLmonster.Name + " killed you." + Environment.NewLine;
+                        if (!isWon)
+                        {
+                            MessageBox.Show("The " + BTLmonster.Name + " killed you." + Environment.NewLine);
+                        }
+
+                        UpdatePlayerStats();
+
+                        this.Close();
+
+                    }
+                    GC.Collect();
+                }
+
+                ScrollToBottomOfMessages(rtbMessages);
+            }
+            else
+            {
+                MessageBox.Show("You can't use that");
+            }
+        }
+
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
             // Get the currently selected potion from the combobox

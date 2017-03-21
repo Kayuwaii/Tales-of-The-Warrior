@@ -224,6 +224,7 @@
             this.btnUseScroll.TabIndex = 28;
             this.btnUseScroll.Text = "Use";
             this.btnUseScroll.UseVisualStyleBackColor = true;
+            this.btnUseScroll.Click += new System.EventHandler(this.btnUseScroll_Click);
             // 
             // cboScrolls
             // 
