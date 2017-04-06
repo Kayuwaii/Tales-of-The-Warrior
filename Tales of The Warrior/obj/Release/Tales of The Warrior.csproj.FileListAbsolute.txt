@@ -32,3 +32,5 @@ C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\R
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\obj\Release\Tales_of_The_Warrior.LAUNCHER.resources
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\LAUNCHER\loli.gif
 C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\LAUNCHER\title.png
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleMusic\2.wav
+C:\Users\alexcoralt\Source\Repos\Tales-of-The-Warrior\Tales of The Warrior\bin\Release\battleMusic\1.wav
